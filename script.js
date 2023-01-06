@@ -19,7 +19,9 @@ function preload() {
 
 function setup() {
     frameRate(30);
-    createCanvas(928, 896);
+    let layoutW = windowWidth - (windowWidth % 16) - 16;
+    let layoutH = windowHeight - (windowHeight % 16) - 16;
+    createCanvas(layoutW, layoutH);
     for (let h = 0; h < height; h++) {
         let row = [];
         for (let w = 0; w < width; w++) {
